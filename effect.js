@@ -30,11 +30,8 @@ $('document').ready(function(){
 	});
 	$('#play').click(function(){
 		var audio = $('.song')[0];
-        audio.play();
-	$('#play2').click(function(){
-		var audio = $('.song1')[0];
-        audio.play();
-        $('#bulb_yellow').addClass('bulb-glow-yellow-after');
+        	audio.play();
+	        $('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
 		$('#bulb_green').addClass('bulb-glow-green-after');
@@ -43,10 +40,17 @@ $('document').ready(function(){
 		$('body').css('backgroud-color','#FFF');
 		$('body').addClass('peach-after');
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
-			$('#bannar_coming').fadeIn('slow');
+			$('#play2').fadeIn('slow');
 		});
 	});
-
+	$('#play2').click(function () {
+        	var audio1 = $('.song1')[0];
+       	 	audio.pause();
+        	audio1.play();
+        $(this).fadeOut('slow').delay(6000).promise().done(function () {
+            $('#bannar_coming').fadeIn('slow');
+        });
+    });
 	$('#bannar_coming').click(function(){
 		$('.bannar').addClass('bannar-come');
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
