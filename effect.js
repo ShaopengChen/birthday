@@ -44,7 +44,7 @@ $('document').ready(function(){
 		});
 	});
 	$('#play2').click(function () {
-        	var audio1 = $('.song')[0];
+        	var audio1 = $('.song1')[0];
        	 	audio.pause();
         	audio1.play();
         $(this).fadeOut('slow').delay(6000).promise().done(function () {
